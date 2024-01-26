@@ -1,17 +1,16 @@
-public class Bird {
-    private String name;
-    public Bird(String name){
-        this.name = name;
-    }
-    public String getName() {
-        return name;
+public abstract class Bird {
+    private boolean canFly;
+
+    // Конструктор
+    public Bird(boolean canFly) {
+        this.canFly = canFly;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    // Get-метод для canFly
+    public boolean canFly() {
+        return canFly;
     }
 
-    public String fly(){
-        return name + " літає";
-    }
+    // Абстрактний метод, що демонструє здатність літати
+    public abstract void fly();
 }

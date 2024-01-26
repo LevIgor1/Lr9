@@ -1,12 +1,17 @@
-public class Penguin extends Bird {
-    public Penguin(String name) {
-        super(name);
+public class Penguin extends Bird{
+    // Конструктор
+    public Penguin() {
+        super(false); // Пінгвіни не літають
     }
+
+    // Метод, що демонструє здатність швидко бігати
+    public void run() {
+        System.out.println("Пінгвін вміє швидко бігати.");
+    }
+
+    // Реалізація абстрактного методу
     @Override
-    public String fly(){
-        return getName() + " не літає";
-    }
-    public String swim(){
-        return getName() + " плаває";
+    public void fly() {
+        System.out.println("Пінгвін не може літати.");
     }
 }
